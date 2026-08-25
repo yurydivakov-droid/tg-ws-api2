@@ -1,0 +1,15 @@
+name = "tg-ws-api2"
+main = "src/index.js"
+compatibility_date = "2026-03-01"
+
+[durable_objects]
+bindings = [
+  { name = "WS_PROXY", class_name = "WebSocketProxy" }
+]
+
+[[migrations]]
+tag = "v1"
+new_sqlite_classes = ["WebSocketProxy"]
+
+[vars]
+ENVIRONMENT = "production"
